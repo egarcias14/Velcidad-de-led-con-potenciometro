@@ -1,0 +1,51 @@
+# Velcidad-de-led-con-potenciometro
+int sensor = A0;  //Se declara en donde se conectara el sensor
+int ledPin = 0;   //Se declara la entrada digital 0 para el led 1
+int ledPin1 = 1;  //Del led 2
+int ledPin2 = 2;  //Del led 3
+int ledPin3 = 3;  //Del led 4
+int ledPin4 = 4;  //Del led 5
+int ledPin5 = 5;  //Del led 6
+int ledPin6 = 6;  //Del led 7
+int ledPin7 = 7;  //Del led 8
+int ledPin8 = 8;  //Del led 9
+int ledPin9 = 9;  //Del led 10
+
+void setup() { 
+pinMode(ledPin, OUTPUT); //Se coloca la salida del led que esta conectado en la entrada digital 0
+pinMode(ledPin1, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 1
+pinMode(ledPin2, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 2
+pinMode(ledPin3, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 3
+pinMode(ledPin4, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 4
+pinMode(ledPin5, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 5
+pinMode(ledPin6, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 6
+pinMode(ledPin7, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 7
+pinMode(ledPin8, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 8
+pinMode(ledPin9, OUTPUT);//Se coloca la salida del led que esta conectado en la entrada digital 9
+}
+void loop() {
+int pot;
+pot = analogRead(sensor); //Se almacena en una variable el sensor que se conecto en una entrada analoga
+digitalWrite(ledPin, HIGH); //Se establece la información de que los led de cada entrada digital encienda
+digitalWrite(ledPin1, HIGH);
+digitalWrite(ledPin2, HIGH);
+digitalWrite(ledPin3, HIGH);
+digitalWrite(ledPin4, HIGH);
+digitalWrite(ledPin5, HIGH);
+digitalWrite(ledPin6, HIGH);
+digitalWrite(ledPin7, HIGH);
+digitalWrite(ledPin8, HIGH);
+digitalWrite(ledPin9, HIGH);
+delay(pot); //Variara el tiempo de encendido de acuerdo al sensor detecta movimiento del potenciometro
+digitalWrite(ledPin, LOW); //Se establece la información de que los led de cada entrada digital se apague
+digitalWrite(ledPin1, LOW);
+digitalWrite(ledPin2, LOW);
+digitalWrite(ledPin3, LOW);
+digitalWrite(ledPin4, LOW);
+digitalWrite(ledPin5, LOW);
+digitalWrite(ledPin6, LOW); 
+digitalWrite(ledPin7, LOW);
+digitalWrite(ledPin8, LOW);
+digitalWrite(ledPin9, LOW);
+delay(pot);//Variara el tiempo de apagado de acuerdo al sensor detecta movimiento del potenciometro
+}
